@@ -37,14 +37,14 @@ export const metadata: Metadata = {
     "Web Developer India",
     "Sci-Fi Portfolio",
   ],
-  authors: [{ name: "Rohit Verma", url: "https://github.com/rohit637869" }],
+  authors: [{ name: "Rohit Verma", url: "https://github.com/XRS5548" }],
   creator: "Rohit Verma",
   publisher: "R-V49X",
   openGraph: {
     title: "R-V49X — The Futuristic Developer Portfolio of Rohit Verma",
     description:
       "Explore the sci-fi themed developer space of Rohit Verma. Showcasing projects, skills, and creative experiments built using Next.js, React, and cutting-edge technologies.",
-    url: "https://rv49x.dev",
+    url: "https://rv49x.vercel.app/",
     siteName: "R-V49X",
     images: [
       {
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
-  metadataBase: new URL("https://rv49x.dev"),
+  metadataBase: new URL("https://rv49x.vercel.app/"),
   icons: {
     icon: "/favicon.ico",
   },

@@ -77,11 +77,11 @@ export default function ContactSection() {
               <Mail size={18} /> rohitverma637869@gmail.com
             </p>
             <Link
-              href="https://github.com/rohit637869"
+              href="https://github.com/XRS5548"
               target="_blank"
               className="flex items-center gap-3 hover:text-primary transition"
             >
-              <Github size={18} /> github.com/rohit637869
+              <Github size={18} /> https://github.com/XRS5548
             </Link>
             <Link
               href="http://www.linkedin.com/in/xrs5548"
