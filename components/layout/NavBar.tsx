@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence, Variants } from 'framer-motion'
+import LogoMonogram from './LogoMonogram'
+import LogoSciFi from './LogoMonogram'
 
 const links = [
   { name: 'Home', href: '/' },
@@ -69,9 +71,11 @@ export default function NavBar() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <Link href="/" className="text-xl md:text-2xl font-bold tracking-wide">
-            <span className="text-primary">R</span>ohit{' '}
-            <span className="text-primary">V</span>erma
+          <Link href="/" className="text-xl md:text-2xl font-bold tracking-wide"
+          
+          >
+            {/* R-V49X  */}
+            <LogoSciFi  />
           </Link>
         </motion.div>
 
