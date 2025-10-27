@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Github, Linkedin, Send } from 'lucide-react'
+import { Mail, Github, Linkedin, Send, Loader2 } from 'lucide-react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -10,17 +10,39 @@ import { Textarea } from '@/components/ui/textarea'
 
 export default function ContactSection() {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [loading, setLoading] = useState(false)
+  const [success, setSuccess] = useState<string | null>(null)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // later: integrate with API or email service
-    console.log('Form submitted:', form)
-    setForm({ name: '', email: '', message: '' })
-    alert('Thanks for reaching out! I will get back to you soon.')
+    setLoading(true)
+    setSuccess(null)
+
+    try {
+      const res = await fetch('/api/post/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+
+      const data = await res.json()
+
+      if (res.ok) {
+        setSuccess('Message sent successfully 🚀')
+        setForm({ name: '', email: '', message: '' })
+      } else {
+        setSuccess(data.message || 'Something went wrong ❌')
+      }
+    } catch (error) {
+      console.error('Error sending message:', error)
+      setSuccess('Failed to send message ❌')
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -66,7 +88,7 @@ export default function ContactSection() {
               target="_blank"
               className="flex items-center gap-3 hover:text-primary transition"
             >
-              <Linkedin size={18} /> http://www.linkedin.com/in/xrs5548
+              <Linkedin size={18} /> linkedin.com/in/xrs5548
             </Link>
           </div>
         </motion.div>
@@ -105,9 +127,34 @@ export default function ContactSection() {
             required
           />
 
-          <Button type="submit" size="lg" className="w-full flex items-center gap-2 justify-center">
-            <Send size={18} /> Send Message
+          <Button
+            type="submit"
+            size="lg"
+            className="w-full flex items-center gap-2 justify-center"
+            disabled={loading}
+          >
+            {loading ? (
+              <>
+                <Loader2 className="animate-spin" size={18} /> Sending...
+              </>
+            ) : (
+              <>
+                <Send size={18} /> Send Message
+              </>
+            )}
           </Button>
+
+          {success && (
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className={`text-center text-sm mt-3 ${
+                success.includes('🚀') ? 'text-green-400' : 'text-red-400'
+              }`}
+            >
+              {success}
+            </motion.p>
+          )}
         </motion.form>
       </div>
 
