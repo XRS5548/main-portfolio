@@ -21,7 +21,7 @@ const certificates = [
     title: 'Technology Job Simulation',
     platform: 'Deloitte (via Forage)',
     date: 'July 2025',
-    code: '—',
+    code: 'J6D7QP9eYXpz9SkbD',
   },
   {
     title: 'Introduction to Generative AI Studio',

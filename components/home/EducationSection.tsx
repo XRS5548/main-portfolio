@@ -9,7 +9,7 @@ const education = [
     degree: 'Bachelor of Technology (B.Tech)',
     branch: 'Computer Science & Engineering',
     college: 'Compucom Institute of Technology & Management, Jaipur',
-    duration: '2021 – 2025',
+    duration: '2023 – 2027',
     highlights: [
       'Key coursework: DSA, OS, DBMS, Computer Networks, AI, Web & Mobile Development.',
       'Participated in Smart India Hackathon 2024.',
