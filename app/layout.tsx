@@ -71,6 +71,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+<head >
+  <meta name="google-site-verification" content="GomtazhKgWAzvnfXrJgXseR8x0jmh5-C8Ogt68aCfkg" />
+</head>
+
       <body
       // ${geistSans.variable} ${geistMono.variable} antialiased
         className={`  scroll-smooth ${inter.variable} ${orbitron.variable} font-sans se` } style={{scrollBehavior:"smooth"}}
