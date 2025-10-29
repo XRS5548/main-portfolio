@@ -21,7 +21,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/80 z-10"></div>
 
       {/* Main Content */}
-      <div className="z-20 text-center px-6">
+      <div className="z-20 text-center px-6 h-0">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

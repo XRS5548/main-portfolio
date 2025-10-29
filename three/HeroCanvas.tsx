@@ -31,13 +31,13 @@ const gltf = useGLTF(modelPath) as unknown as GLTFResult
   useFrame((state, delta) => {
     const t = state.clock.getElapsedTime()
     // Floating animation
-    group.current.position.y = -0.9 + Math.sin(t * 0.8) * 0.06
+    group.current.position.y = 0.2 + Math.sin(t * 0.8) * 0.06
     // Rotation animation
     group.current.rotation.y += delta * 0.2
   })
 
   return (
-    <group ref={group} dispose={null} position={[0, -0.2, 0]} scale={[0.9, 0.9, 0.9]}>
+    <group ref={group} dispose={null} position={[0, -0.2, 0]} scale={[.1,.1,.1]}>
       <primitive object={gltf.scene} />
     </group>
   )
@@ -94,7 +94,7 @@ export default function HeroCanvas() {
       <Suspense fallback={<ModelFallback />}>
         <Environment preset="studio" />
         <FloatingModel modelPath="/models/laptop.glb" />
-        <ContactShadows position={[0, -0.35, 0]} opacity={0.6} scale={2} blur={2} far={0.8} />
+        <ContactShadows position={[0, -0.35, 0]} opacity={0.1} scale={0.5} blur={0} far={0.8} />
       </Suspense>
 
       {/* Debug helper (remove in production) */}
