@@ -16,12 +16,12 @@ const projects = [
     live: 'https://easytoolspace.vercel.app/',
   },
   {
-    title: 'Alnnovate Company',
+    title: 'AreaKnotch Labs',
     desc: 'A modern real estate company website built with Next.js, Shadcn UI, MongoDB, and Framer Motion, featuring elegant animations, dynamic content, and a premium business design..',
-    image: '/images/alnnovate.png',
+    image: '/images/areaknotch.png',
     tech: ['Next.js', 'shadcn/ui',"MongoDB", 'Tailwind', 'Framer Motion'],
-    github: 'https://github.com/XRS5548/allnovate',
-    live: 'https://alnnovate.vercel.app/',
+    github: 'https://github.com/XRS5548/areaknotchlabs',
+    live: 'https://areaknotchlabs.vercel.app/',
   },
   {
     title: 'HiQuizz',
