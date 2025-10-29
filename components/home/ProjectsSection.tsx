@@ -8,6 +8,22 @@ import { Github, ExternalLink } from 'lucide-react'
 
 const projects = [
   {
+    title: 'Easy Tool Space',
+    desc: 'An all-in-one web platform offering free online tools like image-to-text, text-to-speech, PDF converter, and SQL builder — everything in one place for easy access.',
+    image: '/images/easytoolspace.png',
+    tech: ['Next.js', 'shadcn/ui',"MongoDB", 'Tailwind', 'Framer Motion'],
+    github: 'https://github.com/XRS5548/easytools',
+    live: 'https://easytoolspace.vercel.app/',
+  },
+  {
+    title: 'Alnnovate Company',
+    desc: 'A modern real estate company website built with Next.js, Shadcn UI, MongoDB, and Framer Motion, featuring elegant animations, dynamic content, and a premium business design..',
+    image: '/images/alnnovate.png',
+    tech: ['Next.js', 'shadcn/ui',"MongoDB", 'Tailwind', 'Framer Motion'],
+    github: 'https://github.com/XRS5548/allnovate',
+    live: 'https://alnnovate.vercel.app/',
+  },
+  {
     title: 'HiQuizz',
     desc: 'A dynamic quiz platform built with Next.js and MongoDB featuring authentication, interactive UI, and leaderboard system.',
     image: '/images/hiquizz.png',
@@ -24,13 +40,14 @@ const projects = [
     live: 'https://jobboard56465464.vercel.app/',
   },
   {
-    title: 'Easy Tool Space',
-    desc: 'An all-in-one web platform offering free online tools like image-to-text, text-to-speech, PDF converter, and SQL builder — everything in one place for easy access.',
-    image: '/images/easytoolspace.png',
+    title: 'Rutron Website',
+    desc: 'Engineered a cutting-edge portfolio template leveraging Next.js 14, Shadcn/ui, and advanced animations to deliver exceptional user experiences with lightning-fast loading speeds. Features a fully customizable CMS powered by MongoDB for dynamic content management...',
+    image: '/images/rutron.png',
     tech: ['Next.js', 'shadcn/ui',"MongoDB", 'Tailwind', 'Framer Motion'],
-    github: 'https://github.com/XRS5548/easytools',
-    live: 'https://easytoolspace.vercel.app/',
+    github: 'https://github.com/XRS5548/rutron-animated-website',
+    live: ' https://rutron.vercel.app/',
   },
+  
 ]
 
 export default function ProjectsSection() {
