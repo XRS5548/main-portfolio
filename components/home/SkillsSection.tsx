@@ -8,7 +8,7 @@ const skills = [
   {
     title: 'Web Development',
     icon: <Code2 size={30} />,
-    desc: 'Experienced in building responsive and full-stack web apps using React, Next.js, Node.js, MongoDB, PHP, and MySQL.',
+    desc: 'Experienced in building responsive and full-stack web apps using React, Next.js,React Three Fiber, Node.js, MongoDB, PHP, and MySQL.',
   },
   {
     title: 'Programming Languages',
